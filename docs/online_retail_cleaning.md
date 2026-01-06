@@ -14,7 +14,6 @@
 	- I created a stage1 version of the dataset, this will be used in the process of data cleaning.
 	- I created this version with trimmed and uppercase changed to all TEXT/VARCHAR columns for standardized values.
 	- Query
-	  collapsed:: true
 		- CREATE TABLE bhv_online_retail_stage1 AS
 		  id:: 6958fdd3-27c5-4e29-9e10-5896c341bf85
 		  SELECT 
@@ -40,7 +39,6 @@
 	- The cancelled InvoiceNos had negative values for Quantity and will be removed to solely check the transactions of customers that were completed.
 	- Dataset's rows are reduced from 406,829 to 397,924.
 	- Query
-	  collapsed:: true
 		- DELETE FROM bhv_online_retail_stage1
 		  WHERE "InvoiceNo" LIKE 'C%';
 - Duplicates
