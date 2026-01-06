@@ -1,9 +1,6 @@
 - Total sales overview
-  collapsed:: true
 	- Total amount of products sold
-	  collapsed:: true
 		- Query
-		  collapsed:: true
 			- sales_sum_stockcode AS (
 			  	SELECT
 			  		"Stockcode",
@@ -19,9 +16,7 @@
 			  FROM sales_sum_stockcode
 		- ![image.png](../assets/image_1767590631891_0.png)
 	- Income Gained from sold products
-	  collapsed:: true
 		- Query
-		  collapsed:: true
 			- WITH 
 			  sales_sum_stockcode AS (
 			  	SELECT
@@ -48,9 +43,7 @@
 		- ![image.png](../assets/image_1767590408146_0.png)
 	- 5,165,583 products were sold which amount to 8,886,657.04 of revenue.
 - When do customers buy from the store?
-  collapsed:: true
 	- Query
-	  collapsed:: true
 		- CREATE TABLE bhv_invoice_date_quantity_sold AS 
 		  SELECT
 		  	EXTRACT(MONTH FROM "InvoiceDate") AS "Month",
@@ -64,9 +57,7 @@
 	- The first 8 months of the year was steady, it had little differences in the amount of invoices. The noticeable spikes were only found in March and May, the month after these two always saw a dip and then that will be maintained until August. The 'ber' months see an in increase in invoice count, to contextualize this, these months make up 46% of the total invoices and 47% of the quantity of products sold.
 	- This suggests demand is relatively stable for most of the year, with a strong seasonal uplift toward the end of the year, making the ‘ber’ months a critical period for sales volume.
 - What is the ratio of one-time buyers vs repeat buyers?
-  collapsed:: true
 	- Query
-	  collapsed:: true
 		- --CREATE TABLE bhv_buyer_activity AS 
 		  WITH customer_data AS (
 		  	SELECT
@@ -93,7 +84,6 @@
 		  ;
 	- ![image.png](../assets/image_1767622802908_0.png)
 	- Query
-	  collapsed:: true
 		- CREATE TABLE bhv_repeat_buyer_distribution AS 
 		  SELECT
 		  	'1' AS "Months Active",
@@ -135,7 +125,6 @@
 	- 62% of customers are repeat buyers, majority of these repeat buyers purchasing products for 2 to 4 months of the year, making up 42% of the total repeat buyers.
 	- This indicates that repeat buyers mostly return for a short period of time, while only less than 22% are active for more than half the year.
 - What is the variety of customer purchases?
-  collapsed:: true
 	- Customers' distinct Stockcode purchase
 		- Percentiles
 			- Query
@@ -191,7 +180,6 @@
 			- ![image.png](../assets/image_1767671969154_0.png)
 			- The bar graph above categorizes the variety of products that customers purchase: very low, low, medium, high, and very high. Among these categories, customers fall most in the high and then medium next. This shows that most customers purchase a wide array of products from the store.
 - What is the variety of customer purchases by the Number of Active Months?
-  collapsed:: true
 	- Purchase Variety for Repeat Buyers
 		- Query
 			- --CREATE TABLE bhv_monthly_purchase_variety_by_active_months AS 
@@ -266,7 +254,6 @@
 			- The least active customers, the one-time buyers placed 4th, higher than only the 2-4 month active customers in terms of their monthly average product variety.
 			- While long-term customers higher monthly invoices but not product purchasing variety. Mid- to long-term customers show mixed purchasing patterns, whereas the most active customers demonstrate the highest average monthly product variety.
 - Conclusion
-  collapsed:: true
 	- There is a strong seasonal trend, with customers purchase on the tail-end of the year, during the 'Ber' months.
 	- The majority of the customers are repeat buyers, taking up 62% of the total customer base. Among these, roughly 42% are active for 2-4 months, while 22% are active for 5-13 months.
 	- In terms of raw number of products purchased, most customers fall under the medium to high variety of purchases.
