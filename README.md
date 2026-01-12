@@ -1,6 +1,6 @@
 # Customer Behavior Analysis
 
-**A data analysis project exploring customer purchasing behavior and patterns using SQL and Excel.**
+**A data analysis project exploring customer purchasing behavior and patterns using SQL and PowerBI.**
 
 ---
 
