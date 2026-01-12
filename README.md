@@ -1,4 +1,4 @@
-<img width="666" height="405" alt="image" src="https://github.com/user-attachments/assets/5ba311f0-75a0-4824-a594-68fc242cb0c5" /># Customer Behavior Analysis
+# Customer Behavior Analysis
 
 **A data analysis project exploring customer purchasing behavior and patterns using SQL and Excel.**
 
