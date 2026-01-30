@@ -15,7 +15,6 @@
 	- I created this version with trimmed and uppercase changed to all TEXT/VARCHAR columns for standardized values.
 	- Query
 		- CREATE TABLE bhv_online_retail_stage1 AS
-		  id:: 6958fdd3-27c5-4e29-9e10-5896c341bf85
 		  SELECT 
 		  	TRIM(UPPER(invoiceno)) AS "InvoiceNo",
 		  	TRIM(UPPER(stockcode)) AS "Stockcode",
